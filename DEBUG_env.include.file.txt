@@ -1,11 +1,10 @@
 # Created in the United States of America, North Carolina, Raleigh by Tony Casanova July 22, 2023
 # Purpose: If DEBUG is set to 1, print the env.
 
-BEGIN{
+function PROMEOUT_DEBUG_ENV() {
 
-if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
-   printf("# DEBUG env.\n")
-   system("env|sed 's/^/# /'")
-}
-
+   if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
+      printf("# DEBUG env.\n")
+      system("env|sed 's/^/# /'")
+   }
 }
