@@ -21,19 +21,19 @@ function PROMEOUT_DEBUG_FIELDS_LEVEL_1() {
 }
 
 function set_command_name_category(user_input_command) {
-	if ( user_input_command ~ /iostat/ ) {
-		printf("# iostat command found.\n")
-		user_input_command_category="iostat"
-		printf("# user_input_command_category: %s\n", user_input_command_category)
-		return user_input_command_category
-	}
+   if ( user_input_command ~ /iostat/ ) {
+     printf("# iostat command found.\n")
+     user_input_command_category="iostat"
+     printf("# user_input_command_category: %s\n", user_input_command_category)
+     return user_input_command_category
+   }
 }
 
 function set_command_name_system_executable(user_input_command) {
-	if ( user_input_command ~ /iostat/ ) {
-		printf("# iostat command found.\n")
-		user_input_command_modified = user_input_command
-		gsub("iostat","iostat -x", user_input_command_modified)
-		return user_input_command_modified
-	}
+   if ( user_input_command ~ /iostat/ ) {
+     printf("# iostat command found.\n")
+     user_input_command_modified = user_input_command
+     gsub("iostat","iostat -x", user_input_command_modified)
+     return user_input_command_modified
+   }
 }
