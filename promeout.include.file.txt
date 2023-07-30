@@ -4,8 +4,17 @@
 function PROMEOUT_DEBUG_ENV() {
 
    if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
-      printf("# DEBUG env.\n")
+      printf("# PROMEOUT_DEBUG_ENV:\n")
       system("env|sed 's/^/# /'")
+   }
+
+}
+
+function PROMEOUT_DEBUG_FIELDS_LEVEL_1() {
+
+   if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
+      printf("# PROMEOUT_DEBUG_FIELDS_LEVEL_1:\n")
+      for(f=1;f<=NF;f++){printf("# NR: %s NF:(%s/%s): \"%s\" ",NR,f,NF,$f)};printf("\n\n")
    }
 
 }
