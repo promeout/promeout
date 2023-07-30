@@ -7,4 +7,5 @@ function PROMEOUT_DEBUG_ENV() {
       printf("# DEBUG env.\n")
       system("env|sed 's/^/# /'")
    }
+
 }
