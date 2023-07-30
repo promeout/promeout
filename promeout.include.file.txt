@@ -2,7 +2,9 @@
 # Purpose: If DEBUG is set to 1, print the env.
 
 function PROMEOUT_SET_GLOBALS() {
+   if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
    printf("# PROMEOUT_SET_GLOBALS:\n")
+   }
    THIS_TOOL_NAME="promeout"
 }
 
