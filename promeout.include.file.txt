@@ -1,6 +1,11 @@
 # Created in the United States of America, North Carolina, Raleigh by Tony Casanova July 29, 2023
 # Purpose: If DEBUG is set to 1, print the env.
 
+function PROMEOUT_SET_GLOBALS() {
+   printf("# PROMEOUT_SET_GLOBALS:\n")
+   THIS_TOOL_NAME="promeout"
+}
+
 function PROMEOUT_DEBUG_ENV() {
 
    if (PROMEOUT_DEBUG == 1 || ENVIRON["PROMEOUT_DEBUG"] == 1 ){
