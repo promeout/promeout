@@ -1,0 +1,2 @@
+pic Storage_example.pic | groff -Tps > Storage_example.ps
+open Storage_example.ps
